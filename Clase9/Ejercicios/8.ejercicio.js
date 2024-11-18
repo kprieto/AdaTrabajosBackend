@@ -12,10 +12,13 @@ let ladoC = parseFloat(prompt("Introduce la longitud del lado C del triángulo: 
 if (ladoA === ladoB &&  ladoB === ladoC ){
     console.log("Las longitudes es de un triángulo equilátero.");
     
-} else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoA || ladoB === ladoC) {
+} else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoA) {
     console.log("Las longitudes es de un triángulo isósceles.");
     
-} else {
+} else if (ladoA != ladoB && ladoB != ladoC && ladoA != ladoC) {
     console.log("Las longitudes es de un triángulo escaleno.");
+    
+} else {
+    console.log("Las longitudes ingresadas no forma un triángulo válido.");
     
 }
