@@ -12,9 +12,6 @@ let frase = "JavaScript es un lenguaje poderoso y versátil";
 let separarFrase = frase.split(" ");
 console.log("Separar Frase: ",separarFrase);
 
-let palabrasCortas = [];
-let palabrasLargas = [];
-
 function clasificarPalabras(separarFrase){
     let { cortas, largas } = separarFrase.reduce((resultado, palabra) => {
         if (palabra.length < 5) {

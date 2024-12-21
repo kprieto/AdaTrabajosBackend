@@ -24,3 +24,16 @@ const products = [
     { name: 'Audífonos', price: 75 } 
     ]; 
 
+// 1. Filtrar productos con precio mayor o igual a 50
+let productosFiltrados = products.filter(product => product.price >= 50);
+
+// 2. Obtener solo los nombres de los productos filtrados
+let nombresProductos = productosFiltrados.map(product => product.name);
+
+// 3. Calcular el precio total
+let precioTotal = productosFiltrados.reduce((total, product) => total + product.price, 0);
+
+// 4. Imprimir resultados en la consola
+console.log("Productos seleccionados:");
+console.log(nombresProductos);
+console.log("Precio total:", precioTotal);
