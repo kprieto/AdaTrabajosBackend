@@ -16,16 +16,16 @@ let numeros = [12, 3, 5, 7, 1, 22, 47, 100];
 
 function bubbleSort(numeros) { 
     let n = numeros.length; 
-    let swapped; 
+    let paso; 
     do { 
-        swapped = false; 
+        paso = false; 
         for (let i = 0; i < n - 1; i++) { 
             if (numeros[i] > numeros[i + 1]) { 
                 [numeros[i], numeros[i + 1]] = [numeros[i + 1], numeros[i]]; 
-                swapped = true; 
+                paso = true; 
             } 
         } 
-    } while (swapped); 
+    } while (paso); 
     return numeros; 
 }
 
