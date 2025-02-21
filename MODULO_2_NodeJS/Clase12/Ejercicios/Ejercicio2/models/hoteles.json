@@ -1,0 +1,6 @@
+[
+    {"id": 1, "hotel": "El imperial", "habitaciones": 50},
+    {"id": 2, "hotel": "Santa Isabel", "habitaciones": 100},
+    {"id": 3, "hotel": "El lucerna", "habitaciones": 125}
+
+]
