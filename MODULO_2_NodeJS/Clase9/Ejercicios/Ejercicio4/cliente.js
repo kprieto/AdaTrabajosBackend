@@ -15,3 +15,27 @@ const client = net.createConnection({port: PORT, host: HOST}, () =>{
     console.log('Conectado al servidor');
     client.write('Hola servidor!');
 })
+
+const intervalId = setInterval(() => {
+    console.log('Enviando mensaje automático');
+    client.write('Mensaje automático');
+}, 5000);
+
+client.on('data', (data) => {
+    console.log('Respuesta del servidor:', data.toString());
+});
+
+setTimeout(() => {
+    console.log('Cerrando la conexión tras 20 segundos');
+    clearInterval(intervalId); 
+    client.end();
+}, 20000);
+
+client.on('end', () => {
+    console.log('Servidor cerró la conexión');
+});
+
+client.on('error', (err) => {
+    console.error('Error en la conexión:', err.message);
+
+});
