@@ -1,8 +1,12 @@
 const net = require('net');
 
+let clientesConectados = 0;
 const server = net.createServer((socket) =>{
     // Ejercicio 1 y 2
     console.log("Cliente se ha conectado.");
+    //Ejercicio extra
+    clientesConectados++;
+    console.log("Cliente conectados: ", clientesConectados);
     // Ejercicio 3
     socket.on('data',(data) => {
         
@@ -17,7 +21,9 @@ const server = net.createServer((socket) =>{
     // Ejercicio 5
     socket.on('end', () =>
     {
-        console.log('El cliente se ha desconectado.');
+        //Ejercicio extra
+        clientesConectados--;
+        console.log('El cliente se ha desconectado. Clientes conectados: ', clientesConectados);
             
     })
     

@@ -11,13 +11,13 @@ mantenga activo.
 Cerrar la conexión a los 20 segundos. */
 const net = require('net');
 
-// Crear el cliente y conectarse al servidor
+
 const client = net.createConnection({ port: 9090 }, () => {
     console.log('Conectado al servidor');
     client.write('Hola, servidor!');
 });
 
-// Escuchar los eventos 'data', 'end', 'close' y 'error'
+
 client.on('data', (data) => {
     console.log('Respuesta del servidor:', data.toString());
 });
