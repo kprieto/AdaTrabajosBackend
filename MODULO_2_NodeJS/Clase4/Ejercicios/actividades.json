@@ -1,0 +1,14 @@
+{
+  "actividades": [
+    {
+      "tipo": "correr",
+      "duracion": 30,
+      "fecha": "2025-03-02T03:25:52.798Z"
+    },
+    {
+      "tipo": "nadar",
+      "duracion": 45,
+      "fecha": "2025-03-02T03:25:52.830Z"
+    }
+  ]
+}

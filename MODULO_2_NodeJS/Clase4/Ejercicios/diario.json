@@ -1,0 +1,14 @@
+{
+  "entradas": [
+    {
+      "fecha": "2025-03-02T03:14:55.336Z",
+      "titulo": "Un día en la playa",
+      "contenido": "Hoy fui a la playa y fue maravilloso."
+    },
+    {
+      "fecha": "2025-03-02T03:14:55.354Z",
+      "titulo": "Estudio intensivo",
+      "contenido": "Pasé todo el día estudiando Node.js."
+    }
+  ]
+}

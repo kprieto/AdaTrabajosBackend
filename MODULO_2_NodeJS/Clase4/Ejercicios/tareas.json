@@ -1,0 +1,19 @@
+{
+  "tareas": [
+    {
+      "nombre": "Estudiar Node.js",
+      "descripcion": "Estudiar los fundamentos de Node.js",
+      "estado": "completa"
+    },
+    {
+      "nombre": "Hacer ejercicio",
+      "descripcion": "Hacer ejercicio durante 30 minutos",
+      "estado": "pendiente"
+    },
+    {
+      "nombre": "Relajación",
+      "descripcion": "Practicar la relajación durante 30 minutos",
+      "estado": "pendiente"
+    }
+  ]
+}
