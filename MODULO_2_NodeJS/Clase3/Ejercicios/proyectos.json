@@ -1,0 +1,14 @@
+{
+  "proyectos": [
+    {
+      "id": 1,
+      "nombre": "Desarrollar sitio web",
+      "estado": "finalizado"
+    },
+    {
+      "id": 2,
+      "nombre": "Implementar API",
+      "estado": "en progreso"
+    }
+  ]
+}

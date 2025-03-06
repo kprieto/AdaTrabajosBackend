@@ -20,8 +20,8 @@ function prompForTask(){
 }
 // funcion para al usuario el id de una tarea a eliminar
 function prompForTaskId(){
-    const taskId = readlineSync.question('I ngrese el numero de la tarea a eliminar: ') -1
-    if(taskId < 0 || taskId >= readTasks.length){
+    const taskId = readlineSync.question('Ingrese el numero de la tarea a eliminar: ') -1
+    if(taskId < 0 || taskId >= tasks.length){
         console.log('Tarea no valida');
         return -1;
         

@@ -1,0 +1,10 @@
+{
+  "eventos": [
+    {
+      "id": 2,
+      "nombre": "Feria del Libro",
+      "fecha": "2025-09-20",
+      "lugar": "Centro de Convenciones"
+    }
+  ]
+}

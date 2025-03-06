@@ -1,0 +1,14 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "descripcion": "Estudiar para el examen de programación",
+      "estado": "completada"
+    },
+    {
+      "id": 2,
+      "descripcion": "Ir a la playa",
+      "estado": "pendiente"
+    }
+  ]
+}

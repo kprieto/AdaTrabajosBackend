@@ -1,0 +1,9 @@
+{
+  "compras": [
+    {
+      "id": 2,
+      "nombre": "Bicicleta",
+      "precio": 800
+    }
+  ]
+}
