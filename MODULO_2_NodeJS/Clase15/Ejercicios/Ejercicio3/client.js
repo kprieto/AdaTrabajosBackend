@@ -2,30 +2,22 @@ const net = require('net');
 const crypto = require('crypto');
 
 
-const clave = 'mi_clave_secreta_1234';
+const key = crypto.randomBytes(32);
 const algoritmo = 'aes-256-cbc';
 const iv = crypto.randomBytes(16);
 
 
 
 const cifrar = (texto) => {
-    const cifrador = crypto.createCipheriv(algoritmo, clave, iv);
+    const cifrador = crypto.createCipheriv(algoritmo, key, iv);
     let textoCifrado = cifrador.update(texto, 'utf8', 'hex');
     textoCifrado += cifrador.final('hex');
     return textoCifrado;
 };
 
 const client = net.createConnection({ port: 8080 }, () => {
-    console.log('Conectado al servidor de chat! Por favor, autentíquese.');
-    process.stdin.on('data', (data) => {
-        const mensajeCifrado = cifrar(data.toString().trim());
-        client.write(mensajeCifrado);
-    });
-    
-    process.stdin.on('data', (data) => {
-        const mensajeCifrado = cifrar(data.toString().trim());
-        client.write(mensajeCifrado);
-    });
+    console.log('Conectado al servidor de chat!');
+
 });
 
 client.on('data', (data) => {
@@ -35,3 +27,8 @@ client.on('data', (data) => {
 client.on('end', () => {
     console.log('Desconectado del servidor de chat');
 });
+
+client.on('error', (err) =>{
+    console.log('Error en la conexion: ', err.message);
+    
+})
